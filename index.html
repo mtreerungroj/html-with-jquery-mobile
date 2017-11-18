@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <title>เว็บอ่านตูน</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
+
+  <script>
+    $(document).ready(function () {
+      $("#story_one").load("story_one.html");
+      $("#story_two").load("story_two.html");
+      $("#team").load("team.html");
+      $('#menu_one').click(function () {
+        $("#story_one").show();
+        $("#story_two").hide();
+        $("#team").hide();
+      });
+      $('#menu_two').click(function () {
+        $("#story_one").hide();
+        $("#story_two").show();
+        $("#team").hide();
+      });
+      $('#menu_team').click(function () {
+        $("#story_one").hide();
+        $("#story_two").hide();
+        $("#team").show();
+      });
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div data-role="page" id="foo" data-theme="b">
+
+    <div data-role="header">
+      <h1>เว็บอ่านตูนจ้า</h1>
+    </div>
+
+    <div data-role="footer" class="nav-glyphish-example" data-theme="b">
+      <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+        <ul>
+          <li>
+            <a id="menu_one" data-icon="heart">BATMAN</a>
+          </li>
+          <li>
+            <a id="menu_two" data-icon="heart">GARFIELD</a>
+          </li>
+          <li>
+            <a id="menu_team" data-icon="user">TEAM</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <div id="story_one"></div>
+      <div id="story_two" style="display:none;"></div>
+      <div id="team" style="display:none;"></div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
