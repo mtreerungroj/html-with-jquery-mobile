@@ -4,17 +4,17 @@
     $('#next').click(function () {
       if (countPage < 3) {
         countPage++
-        document.getElementById("imageGarfield").innerHTML = "<img class='image-res' src='./images/b" + countPage + ".jpg'/>";
+        document.getElementById("imageBatman").innerHTML = "<img class='image-res' src='./images/b" + countPage + ".jpg'/>";
       } else {
-        alert("ตอนแรกสุดแล้วจ้า");
+        alert("จบแล้วจ้า");
       }
     });
     $('#back').click(function () {
       if (countPage > 1) {
         countPage--
-        document.getElementById("imageGarfield").innerHTML = "<img class='image-res' src='./images/b" + countPage + ".jpg'/>";
+        document.getElementById("imageBatman").innerHTML = "<img class='image-res' src='./images/b" + countPage + ".jpg'/>";
       } else {
-        alert("จบแล้วจ้า");
+        alert("ตอนแรกสุดแล้วจ้า");
       }
     });
   });
@@ -22,7 +22,7 @@
 
 <body>
   <div>
-    <div id="imageGarfield">
+    <div id="imageBatman">
       <img class="image-res" src='./images/b1.JPG' />
     </div>
     <br/>
@@ -33,7 +33,7 @@
       </div>
       <div id="next" class="ui-input-btn ui-btn ui-btn-inline ">
         Next
-        <input data-enhanced="true" value="back" type="button">
+        <input data-enhanced="true" value="next" type="button">
       </div>
     </form>
   </div>
